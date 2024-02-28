@@ -29,3 +29,7 @@ python vulnPrioritization.py
 ```
 
 The script will guide you through the process.
+
+### Disclaimer
+
+This script is for illustrative purposes only. The author is not responsible for the outcome of your decision to prioritize or remediate vulnerabilities based on the output of this script. Always consult with a qualified security professional when making decisions about vulnerability management.
