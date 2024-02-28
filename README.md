@@ -3,13 +3,6 @@
 VulnHound is a Python script designed to take a CVE (Common Vulnerabilities and Exposures) and determine the risk level of the vulnerability based on the CVSS (Common Vulnerability Scoring System) score, age of the vulnerability, EPSS (Exploit Prediction Scoring System) score, and exposure level.
 
 ### Prerequisites
-Before running the script, you must install and configure cvemap by ProjectDiscovery. You can find the installation instructions (# README.md
-
-## VulnHound
-
-VulnHound is a Python script designed to take a CVE (Common Vulnerabilities and Exposures) and determine the risk level of the vulnerability based on the CVSS (Common Vulnerability Scoring System) score, age of the vulnerability, EPSS (Exploit Prediction Scoring System) score, and exposure level.
-
-### Prerequisites
 
 Before running the script, you must install and configure `cvemap` by ProjectDiscovery. You can find the installation instructions [here](https://github.com/projectdiscovery/cvemap).
 
