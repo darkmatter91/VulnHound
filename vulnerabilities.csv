@@ -1,2 +1,0 @@
-CVE ID,CVE Description,CVSS Score,Age in Days,EPSS Score,Is Exploited,KEV Added Date,Risk Score,Risk Level
-CVE-2023-6549,Improper Restriction of Operations within the Bounds of a Memory Buffer in NetScaler ADC and NetScaler Gateway allows Unauthenticated Denial of Service ,7.5,41,0.00724,True,2024-01-17,8.5,High
