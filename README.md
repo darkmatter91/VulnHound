@@ -1,6 +1,6 @@
-# VulnHound
+# VulnHound Risk Calculator
 
-VulnHound is a Python script designed to take a CVE (Common Vulnerabilities and Exposures) and determine the risk level of the vulnerability based on the CVSS (Common Vulnerability Scoring System) score, age of the vulnerability, EPSS (Exploit Prediction Scoring System) score, and exposure level.
+VulnHound Risk Calculator is a Python script designed to take a CVE (Common Vulnerabilities and Exposures) and determine the risk level of the vulnerability based on the CVSS (Common Vulnerability Scoring System) score, age of the vulnerability, EPSS (Exploit Prediction Scoring System) score, and exposure level.
 
 ### Prerequisites
 
@@ -29,3 +29,7 @@ python vulnPrioritization.py
 ```
 
 The script will guide you through the process.
+
+### Disclaimer
+
+This script is for illustrative purposes only. The author is not responsible for the outcome of your decision to prioritize or remediate vulnerabilities based on the output of this script. Always consult with a qualified security professional when making decisions about vulnerability management.
