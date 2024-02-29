@@ -13,20 +13,22 @@ def banner():
 
 def get_user_input():
     vuln_cve = input("[!]Enter CVE (CVE-XXXX-XXXX): ").upper()
-    # Add code to validate the user input contains "cve". If not, add "cve-" to the beginning of the input
     if "cve" not in vuln_cve.lower():
         vuln_cve = "CVE-" + vuln_cve
-    print(vuln_cve)
     vuln_exposure = input("[!]Vulnerability Exposure (External/Internal/E/I): ")
     if vuln_exposure.lower() not in ['external', 'internal', 'e', 'i']:
         print("Invalid input. Please enter 'External', 'Internal', 'E', or 'I'.")
-        vuln_exposure = input("Vulnerability Exposure (External/Internal/E/I): ")
+        vuln_exposure = input("Vulneraeqbility Exposure (External/Internal/E/I): ")
     return vuln_cve, vuln_exposure
 
 
 def parse_vulnerability(vuln_cve):
     vuln_info = subprocess.run(["cvemap.exe", "-json", "-id", vuln_cve], capture_output=True, text=True, encoding="utf-8")
     vuln_data = json.loads(vuln_info.stdout)
+    # If the CVE is not found, print "CVE not found" and exit the program.
+    if not vuln_data:
+        print(f"[!]CVE {vuln_cve} not found.")
+        exit()
     cve_id = cve_desc = cvss_score = age_in_days = epss_score = is_exploited = kev_added_date = None
     for item in vuln_data:
         if item['cve_id'] == vuln_cve:
@@ -100,8 +102,8 @@ def main():
     print("")
     print("[!] Calculating Vulnerability Priority...")
     risk_score, risk_level = rank_vulnerability(cvss_score, age_in_days, epss_score, vuln_exposure, kev_added_date)
-    print(f"[+]Risk Score: {risk_score}")
-    print(f"[+]Risk Level: {risk_level}")
+    print(f"[!]Risk Score: {risk_score}")
+    print(f"[!]Risk Level: {risk_level}")
     
 
 if __name__ == "__main__":
