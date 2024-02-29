@@ -20,7 +20,7 @@ Before running the script, you must install and configure `cvemap` by ProjectDis
 
 - `rank_vulnerability(cvss_score, age_in_days, epss_score, vuln_exposure, kev_added_date)`: This function takes the CVSS score, age of the vulnerability, EPSS score, exposure level, and the date the vulnerability was added to the KEV (Known Exploited Vulnerabilities) list as arguments. It calculates a risk score based on these factors and assigns a risk level to the vulnerability.
 
-- `write_to_csv(cve_id, cve_desc, cvss_score, age_in_days, epss_score, is_exploited, kev_status, kev_added_date, risk_score, risk_level)`: This function takes the CVE ID, description, CVSS score, age in days, EPSS score, whether the vulnerability is exploited, KEV status, KEV added date, risk score, and risk level as arguments. It writes these details to a CSV file named 'vulnerabilities.csv'.
+- *IN PROGRESS* `write_to_csv(cve_id, cve_desc, cvss_score, age_in_days, epss_score, is_exploited, kev_status, kev_added_date, risk_score, risk_level)`: This function takes the CVE ID, description, CVSS score, age in days, EPSS score, whether the vulnerability is exploited, KEV status, KEV added date, risk score, and risk level as arguments. It writes these details to a CSV file named 'vulnerabilities.csv'.
   - Example CSV Output: ![image](https://github.com/darkmatter91/VulnHoundRiskCalculator/blob/main/assets/sampleOutput.png)
 
 - `main()`: This is the main function that calls all the other functions. It updates the CVE map, gets user input, retrieves vulnerability information, calculates the vulnerability priority, and writes the details to a CSV file.
