@@ -63,7 +63,7 @@ def parse_vulnerability(vuln_cve):
         - is_exploited: A boolean value indicating if the vulnerability is exploited or not.
         - kev_added_date: A string representing the date when the vulnerability was added to the KEV (Known Exploited Vulnerabilities) list.
     """
-    vuln_info = subprocess.run(["cvemap.exe", "-json", "-id", vuln_cve],
+    vuln_info = subprocess.run(["cvemap", "-json", "-id", vuln_cve],
                                capture_output=True,
                                text=True,
                                encoding="utf-8")
